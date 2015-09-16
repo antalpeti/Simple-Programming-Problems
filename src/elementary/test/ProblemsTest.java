@@ -64,7 +64,7 @@ public class ProblemsTest {
   }
 
   /**
-   * Test method for {@link elementary.Problems#problem02()}.
+   * Test method for {@link elementary.Problems#problem02(java.io.InputStream, PrintStream)}.
    */
   @Test
   public final void testProblem02() {
@@ -75,6 +75,25 @@ public class ProblemsTest {
     inContent = new ByteArrayInputStream("John".getBytes());
     problems.problem02(inContent, System.out);
     Assert.assertEquals("What is your name?\r\nWelcome John\r\n", outContent.toString());
+    System.setIn(null);
+  }
+
+  /**
+   * Test method for {@link elementary.Problems#problem03(java.io.InputStream, PrintStream)}.
+   */
+  @Test
+  public final void testProblem03() {
+    ByteArrayInputStream inContent = new ByteArrayInputStream("Peter".getBytes());
+    problems.problem03(inContent, System.out);
+    Assert.assertEquals("What is your name?\r\nI don't know you.\r\n", outContent.toString());
+    outContent.reset();
+    inContent = new ByteArrayInputStream("Alice".getBytes());
+    problems.problem02(inContent, System.out);
+    Assert.assertEquals("What is your name?\r\nWelcome Alice\r\n", outContent.toString());
+    outContent.reset();
+    inContent = new ByteArrayInputStream("Bob".getBytes());
+    problems.problem02(inContent, System.out);
+    Assert.assertEquals("What is your name?\r\nWelcome Bob\r\n", outContent.toString());
     System.setIn(null);
   }
 

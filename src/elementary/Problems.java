@@ -29,4 +29,19 @@ public class Problems {
     System.out.println("Welcome " + name);
     keyboard.close();
   }
+
+  /**
+   * Write a program that asks the user for her name and greets, if the users Alice or Bob.
+   */
+  public void problem03(InputStream in, PrintStream out) {
+    Scanner keyboard = new Scanner(in);
+    out.println("What is your name?");
+    String name = keyboard.nextLine();
+    if (name.equals("Alice") || name.equals("Bob")) {
+      System.out.println("Welcome " + name);
+    } else {
+      System.out.println("I don't know you.");
+    }
+    keyboard.close();
+  }
 }
