@@ -97,4 +97,32 @@ public class ProblemsTest {
     System.setIn(null);
   }
 
+  /**
+   * Test method for {@link elementary.Problems#problem04(java.io.InputStream, PrintStream)}.
+   */
+  @Test
+  public final void testProblem04() {
+    ByteArrayInputStream inContent = new ByteArrayInputStream("-1".getBytes());
+    problems.problem04(inContent, System.out);
+    Assert.assertEquals("Give a number?\r\nThe sum of from 1 to -1 is: 0\r\n",
+        outContent.toString());
+    outContent.reset();
+    inContent = new ByteArrayInputStream("0".getBytes());
+    problems.problem04(inContent, System.out);
+    Assert
+    .assertEquals("Give a number?\r\nThe sum of from 1 to 0 is: 0\r\n", outContent.toString());
+    outContent.reset();
+    inContent = new ByteArrayInputStream("1".getBytes());
+    problems.problem04(inContent, System.out);
+    Assert
+        .assertEquals("Give a number?\r\nThe sum of from 1 to 1 is: 1\r\n", outContent.toString());
+    outContent.reset();
+    outContent.reset();
+    inContent = new ByteArrayInputStream("10".getBytes());
+    problems.problem04(inContent, System.out);
+    Assert.assertEquals("Give a number?\r\nThe sum of from 1 to 10 is: 55\r\n",
+        outContent.toString());
+    outContent.reset();
+    System.setIn(null);
+  }
 }

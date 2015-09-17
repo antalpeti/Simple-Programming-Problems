@@ -21,6 +21,9 @@ public class Problems {
 
   /**
    * Write a program that asks the user for her name and greets her with her name.
+   *
+   * @param in the input stream
+   * @param out the output stream
    */
   public void problem02(InputStream in, PrintStream out) {
     Scanner keyboard = new Scanner(in);
@@ -32,6 +35,9 @@ public class Problems {
 
   /**
    * Write a program that asks the user for her name and greets, if the users Alice or Bob.
+   *
+   * @param in the input stream
+   * @param out the output stream
    */
   public void problem03(InputStream in, PrintStream out) {
     Scanner keyboard = new Scanner(in);
@@ -42,6 +48,24 @@ public class Problems {
     } else {
       System.out.println("I don't know you.");
     }
+    keyboard.close();
+  }
+
+  /**
+   * Write a program that asks the user for a number n and prints the sum of the numbers 1 to n.
+   *
+   * @param in the input stream
+   * @param out the output stream
+   */
+  public void problem04(InputStream in, PrintStream out) {
+    Scanner keyboard = new Scanner(in);
+    out.println("Give a number?");
+    int number = keyboard.nextInt();
+    long sum = 0;
+    for (int i = 1; i <= number; i++) {
+      sum += i;
+    }
+    System.out.println("The sum of from 1 to " + number + " is: " + sum);
     keyboard.close();
   }
 }
