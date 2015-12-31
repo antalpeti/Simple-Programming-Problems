@@ -15,7 +15,7 @@ public class Problems {
   /**
    * Write a program that prints ‘Hello World’ to the screen.
    */
-  public void problem01() {
+  public void solveProblem01() {
     System.out.println("Hello World!");
   }
 
@@ -25,7 +25,7 @@ public class Problems {
    * @param in the input stream
    * @param out the output stream
    */
-  public void problem02(InputStream in, PrintStream out) {
+  public void solveProblem02(InputStream in, PrintStream out) {
     Scanner keyboard = new Scanner(in);
     out.println("What is your name?");
     String name = keyboard.nextLine();
@@ -39,7 +39,7 @@ public class Problems {
    * @param in the input stream
    * @param out the output stream
    */
-  public void problem03(InputStream in, PrintStream out) {
+  public void solveProblem03(InputStream in, PrintStream out) {
     Scanner keyboard = new Scanner(in);
     out.println("What is your name?");
     String name = keyboard.nextLine();
@@ -57,7 +57,7 @@ public class Problems {
    * @param in the input stream
    * @param out the output stream
    */
-  public void problem04(InputStream in, PrintStream out) {
+  public void solveProblem04(InputStream in, PrintStream out) {
     Scanner keyboard = new Scanner(in);
     out.println("Give a number?");
     int number = keyboard.nextInt();
@@ -76,7 +76,7 @@ public class Problems {
    * @param in the input stream
    * @param out the output stream
    */
-  public void problem05(InputStream in, PrintStream out) {
+  public void solveProblem05(InputStream in, PrintStream out) {
     Scanner keyboard = new Scanner(in);
     out.println("Give a number?");
     int number = keyboard.nextInt();
