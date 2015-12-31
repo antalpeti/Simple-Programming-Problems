@@ -110,17 +110,48 @@ public class ProblemsTest {
     inContent = new ByteArrayInputStream("0".getBytes());
     problems.problem04(inContent, System.out);
     Assert
-    .assertEquals("Give a number?\r\nThe sum of from 1 to 0 is: 0\r\n", outContent.toString());
+        .assertEquals("Give a number?\r\nThe sum of from 1 to 0 is: 0\r\n", outContent.toString());
     outContent.reset();
     inContent = new ByteArrayInputStream("1".getBytes());
     problems.problem04(inContent, System.out);
     Assert
-        .assertEquals("Give a number?\r\nThe sum of from 1 to 1 is: 1\r\n", outContent.toString());
-    outContent.reset();
+    .assertEquals("Give a number?\r\nThe sum of from 1 to 1 is: 1\r\n", outContent.toString());
     outContent.reset();
     inContent = new ByteArrayInputStream("10".getBytes());
     problems.problem04(inContent, System.out);
     Assert.assertEquals("Give a number?\r\nThe sum of from 1 to 10 is: 55\r\n",
+        outContent.toString());
+    outContent.reset();
+    System.setIn(null);
+  }
+
+  /**
+   * Test method for {@link elementary.Problems#problem05(java.io.InputStream, PrintStream)}.
+   */
+  @Test
+  public final void testProblem05() {
+    ByteArrayInputStream inContent = new ByteArrayInputStream("-1".getBytes());
+    problems.problem05(inContent, System.out);
+    Assert.assertEquals(
+        "Give a number?\r\nThe sum of numbers of dividable 3 or 5 from 1 to -1 is: 0\r\n",
+        outContent.toString());
+    outContent.reset();
+    inContent = new ByteArrayInputStream("3".getBytes());
+    problems.problem05(inContent, System.out);
+    Assert.assertEquals(
+        "Give a number?\r\nThe sum of numbers of dividable 3 or 5 from 1 to 3 is: 3\r\n",
+        outContent.toString());
+    outContent.reset();
+    inContent = new ByteArrayInputStream("5".getBytes());
+    problems.problem05(inContent, System.out);
+    Assert.assertEquals(
+        "Give a number?\r\nThe sum of numbers of dividable 3 or 5 from 1 to 5 is: 8\r\n",
+        outContent.toString());
+    outContent.reset();
+    inContent = new ByteArrayInputStream("10".getBytes());
+    problems.problem05(inContent, System.out);
+    Assert.assertEquals(
+        "Give a number?\r\nThe sum of numbers of dividable 3 or 5 from 1 to 10 is: 33\r\n",
         outContent.toString());
     outContent.reset();
     System.setIn(null);

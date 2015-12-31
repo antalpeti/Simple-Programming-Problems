@@ -68,4 +68,26 @@ public class Problems {
     System.out.println("The sum of from 1 to " + number + " is: " + sum);
     keyboard.close();
   }
+
+  /**
+   * Modify the previous program such that only multiples of three or five are considered in the
+   * sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
+   *
+   * @param in the input stream
+   * @param out the output stream
+   */
+  public void problem05(InputStream in, PrintStream out) {
+    Scanner keyboard = new Scanner(in);
+    out.println("Give a number?");
+    int number = keyboard.nextInt();
+    long sum = 0;
+    for (int index = 1; index <= number; index++) {
+      if (index % 3 == 0 || index % 5 == 0) {
+        sum += index;
+      }
+    }
+    System.out
+        .println("The sum of numbers of dividable 3 or 5 from 1 to " + number + " is: " + sum);
+    keyboard.close();
+  }
 }
